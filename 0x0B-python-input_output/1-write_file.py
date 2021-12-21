@@ -1,14 +1,8 @@
 #!/usr/bin/python3
-""" counting number of lines in a File"""
+"""defining write_file with two arguments"""
 
 
-def number_of_lines(filename=""):
-    with open(filename, encoding="utf-8") as f:
-        numlines = 0
-        while True:
-            line = f.readline()
-            if not line:
-                break
-            numlines += 1
-
-    return (numlines)
+def write_file(filename="", text=""):
+    """reads filename with utf-8"""
+    with open(filename, "w", encoding='utf-8') as f:
+        return f.write(text)

@@ -1,13 +1,11 @@
 #!/usr/bin/node
-// This script prints a square
-if ((isNaN(process.argv[2])) === false) {
-    let line = '';
-    for (let num = 0; num < parseInt(process.argv[2]); num++) {
-	line += 'X';
-    }
-    for (let num = 0; num < parseInt(process.argv[2]); num++) {
-	console.log(line);
-    }
+const size = process.argv[2];
+if (isNaN(size)) {
+  console.log('Missing size');
 } else {
-    console.log('Missing size');
+  for (let i = 0; i < size; i++) {
+    let row = '';
+    for (let c = 0; c < size; c++) row += 'X';
+    console.log(row);
+  }
 }

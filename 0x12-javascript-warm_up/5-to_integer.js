@@ -1,7 +1,7 @@
 #!/usr/bin/node
-// This script converts the first argument passed to it to integer and prints it
-if ((isNaN(process.argv[2])) === false) {
-    console.log('My number: ' + parseInt(process.argv[2]));
+const arg = process.argv[2];
+if (isNaN(arg)) {
+  console.log('Not a number');
 } else {
-    console.log('Not a number');
+  console.log('My number: ' + arg);
 }
